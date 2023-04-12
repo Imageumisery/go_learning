@@ -37,7 +37,7 @@ func main() {
 		capacity: 78,
 	}
 
-	SomeNewDev := &CppDev
+	SomeNewDev := CppDev
 	SomeNewDev.age = 46
 	fmt.Println(CppDev.age)
 	fmt.Println(SomeNewDev.age)
