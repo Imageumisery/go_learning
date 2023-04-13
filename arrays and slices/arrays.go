@@ -15,7 +15,7 @@ func main() {
 	//просто присваивание тут означает копирование содержимого
 	//чтобы присвоить адрес переменной надо пользоваться специальным оператором &
 
-	/*fmt.Printf("numbers: %v\n", numbers)
+	fmt.Printf("numbers: %v\n", numbers)
 	fmt.Printf("Capacity: %v\n", cap(nums))
 	fmt.Printf("length: %v\n", len(nums))
 	fmt.Printf("nums: %v\n", nums)
@@ -24,7 +24,7 @@ func main() {
 	fmt.Printf("numbers: %v\n", numbers)
 	fmt.Printf("num: %v\n", numbers[0])
 	b[0] = 2
-	*/
+
 	fmt.Printf("b: %v\n", b)
 	//slices
 	a := someSlice

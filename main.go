@@ -32,12 +32,12 @@ const (
 
 func main() {
 	//const a int64 = 78
-	/*fmt.Println(b1)
+	fmt.Println(b1)
 	fmt.Println(b2)
 	fmt.Println(b3)
 	fmt.Println(b4)
 	fmt.Println(b5)
-	*/
+
 	callBytes()
 }
 

@@ -20,5 +20,6 @@ func main() {
 	if a := 23; a > 4 {
 		fmt.Println("a is more than 4", a)
 	}
+
 	fmt.Println("a")
 }
