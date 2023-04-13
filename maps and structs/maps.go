@@ -17,6 +17,9 @@ func main() {
 	fmt.Println(states)
 	delete(states, "Colorado")
 	states["NewYork"] = 1
-	states["Keek"] = 89765
+	states["Keek"] = 8976324
+	field, ok := states["Kek"]
+
 	fmt.Println(states)
+	fmt.Println(field, ok)
 }
