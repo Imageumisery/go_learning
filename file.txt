@@ -1,2 +1,1 @@
-wd2wd223ewdawdxasx
-asdasdwdedq2222
+This is a sample text to try out copy function of golang!

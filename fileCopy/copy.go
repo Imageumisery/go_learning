@@ -2,33 +2,36 @@ package main
 
 import (
 	"fmt"
-	"io"
+	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
 )
 
+var sourceFile = "/Documents/vscode/go_learning/file.txt"
+var destinationFile = "/Documents/vscode/go_learning/myfile.txt"
+
 func main() {
-	filename := "myfile.txt"
-	file, err := os.Create(filename)
+	copy()
+}
+
+func copy()  {
+	homeDir, err := os.UserHomeDir()
 	if err != nil {
 		log.Fatal(err)
-	}
-	defer file.Close()
-
-	homePath, err := os.UserHomeDir()
-	fmt.Println(filepath.Ext(homePath))
-
-	dest, err := os.OpenFile("/home/blaze/Documents/neworkspace/file.txt", os.O_RDWR|os.O_CREATE, 0755)
+	} 
+	inputPath := filepath.Join(homeDir + sourceFile)
+	input, err := ioutil.ReadFile(inputPath)
 	if err != nil {
 		log.Fatal(err)
+		return
 	}
-	defer dest.Close()
-
-	bytesWritten, err := io.Copy(dest, file)
+	
+	destPath := filepath.Join(homeDir + destinationFile)
+	err = ioutil.WriteFile(destPath, input, 0644)
 	if err != nil {
 		log.Fatal(err)
+		return
 	}
-	fmt.Printf("Bytes written: %d\n", bytesWritten)
-
+	fmt.Println("Copied successfully!")
 }
