@@ -89,10 +89,10 @@ func main() {
 		name: "NodiraFss",
 	} */
 
-	//Pet(MySnake, John) won't compile
+	//Pet(MySnake, John) won't compile cause snake doesn't implement Domesticanimal interface
 	Pet(MyCat, John)
 	Pet(MyDog, John)
-	
+
 	myInt := IntCounter(0)
 	var inc Incrementer = &myInt
 
